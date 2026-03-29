@@ -82,6 +82,7 @@ public static class Setup
         var policyConfig = (IPolicyConfig)new PolicyConfigClient();
         try
         {
+            //todo fix issue: Attempted to read or write protected memory. This is often an indication that other memory is corrupt. Repeat 2 times:
             var app = Process.GetProcessesByName(application)[0];
             policyConfig.SetPersistedDefaultAudioEndpoint(
             (uint)app.Id,
